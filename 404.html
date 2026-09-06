@@ -1,7 +1,6 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js" data-theme-init>
   <head>
-	<meta name="generator" content="Hugo 0.165.0">
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -32,21 +31,17 @@
 </script>
 <meta name="robots" content="index, follow">
 
-<title>Dotfiles</title>
-<meta name="description" content="Personal configuration files with installation and comparison commands">
-<meta property="og:url" content="/">
+<title>404 Page not found | Dotfiles</title>
+<meta name="description" content="">
+<meta property="og:url" content="/404.html">
 	<meta property="og:site_name" content="Dotfiles">
-	<meta property="og:title" content="Dotfiles">
-	<meta property="og:description" content="Personal configuration files with installation and comparison commands">
+	<meta property="og:title" content="404 Page not found">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="website">
 
-	<meta itemprop="name" content="Dotfiles">
-	<meta itemprop="description" content="Personal configuration files with installation and comparison commands">
-	<meta itemprop="wordCount" content="180">
+	<meta itemprop="name" content="404 Page not found">
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Dotfiles">
-	<meta name="twitter:description" content="Personal configuration files with installation and comparison commands">
+	<meta name="twitter:title" content="404 Page not found">
 <link rel="preload" href="/scss/main.min.8f0680d136cc9695b0ad0e99d08675b9835bbc1b0b99eda42af2f5baac89c013.css" as="style" integrity="sha256-jwaA0TbMlpWwrQ6Z0IZ1uYNbvBsLme2kKvL1uqyJwBM=" crossorigin="anonymous">
 <link href="/scss/main.min.8f0680d136cc9695b0ad0e99d08675b9835bbc1b0b99eda42af2f5baac89c013.css" rel="stylesheet" integrity="sha256-jwaA0TbMlpWwrQ6Z0IZ1uYNbvBsLme2kKvL1uqyJwBM=" crossorigin="anonymous">
 <script
@@ -55,7 +50,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-home">
+  <body class="td-404">
     <header>
       <nav class="td-navbar js-navbar-scroll">
 <div class="td-navbar-container container-fluid flex-column flex-md-row">
@@ -132,63 +127,10 @@
     </header>
     <div class="container-fluid td-default td-outer">
       <main role="main" class="td-main">
-        
-<section class="row">
-  <div class="col">
-    <div class="container td-content landing-content">
-      <h1>Dotfiles</h1>
-      
-      <p class="lead">Personal configuration files with installation and comparison commands</p>
-       
-      <p class="text-body-secondary">Built with sh, lua.</p>
-       <p>This project packages personal configuration files into an installable
-archive. Make and Bazel entry points compare the packaged files with the
-local system and install selected configurations.</p>
-<h2 id="links">Links</h2>
-<ul>
-<li>Source code: <a
-  href="https://github.com/alwaldend/src/tree/master/projects/dotfiles"
-  
-  >https://github.com/alwaldend/src/tree/master/projects/dotfiles</a
->
-</li>
-</ul>
-<h2 id="features">Features</h2>
-<ul>
-<li>Archive with dotfiles that can be installed using make</li>
-</ul>
-<h2 id="bazel-usage">Bazel usage</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>bazel run //projects/dotfiles:help <span style="color:#75715e"># Show help</span>
-</span></span><span style="display:flex;"><span>bazel run //projects/dotfiles:diff <span style="color:#75715e"># Show diff</span>
-</span></span><span style="display:flex;"><span>bazel run //projects/dotfiles:install <span style="color:#75715e"># Install files</span>
-</span></span></code></pre></div><h2 id="archive-usage">Archive usage</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>oras pull --output <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> docker.io/alwaldend/src:projects_dotfiles_dotfiles_tar_head
-</span></span><span style="display:flex;"><span>cd releases/projects/dotfiles/head/files
-</span></span><span style="display:flex;"><span>tar -xf dotfiles.tar
-</span></span><span style="display:flex;"><span>cd dotfiles
-</span></span><span style="display:flex;"><span>make help <span style="color:#75715e"># Show help</span>
-</span></span><span style="display:flex;"><span>make diff <span style="color:#75715e"># Check diff between system files and those from the archive</span>
-</span></span><span style="display:flex;"><span>make diff/nvim <span style="color:#75715e"># Check diff for all nvim files</span>
-</span></span><span style="display:flex;"><span>make diff/nvim/.config/nvim/lazy-lock.json <span style="color:#75715e"># Diff specific file</span>
-</span></span><span style="display:flex;"><span>make install <span style="color:#75715e"># Install all files from the archive</span>
-</span></span><span style="display:flex;"><span>make install/nvim <span style="color:#75715e"># Install nvim files</span>
-</span></span><span style="display:flex;"><span>make install/nvim/.config/nvim/lazy-lock.json <span style="color:#75715e"># Install a specific file</span>
-</span></span></code></pre></div><h2 id="help">Help</h2>
-<pre tabindex="0"><code>help: Show help
-install: Install files from the archive
-diff: Show diff between archive files and system files
-install/bin: Install bin files
-diff/bin: Diff bin files
-install/home: Install home files
-diff/home: Diff home files
-install/nvim: Install nvim files
-diff/nvim: Diff nvim files
-make: Nothing to be done for &#39;help&#39;.
-</code></pre>
-    </div>
-  </div>
-</section>
-
+        <div class="td-content">
+  <h1>Not found</h1>
+  <p>Oops! This page doesn't exist. Try going back to the <a href="/">home page</a>.</p>
+</div>
       </main>
       <footer class="td-footer row d-print-none">
   <div class="container-fluid">
